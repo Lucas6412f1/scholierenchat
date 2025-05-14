@@ -43,7 +43,10 @@ app.post('/login', async (req, res) => {
   if (!match) return res.status(400).json({ error: 'Onjuiste gegevens.' });
   res.json({ success: true });
 });
-
+// Root endpoint
+app.get('/', (req, res) => {
+  res.send('Scholierenchat backend draait!');
+});
 // Socket.io for public chat
 io.on('connection', (socket) => {
   onlineCount++;
