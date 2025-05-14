@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scholieren chat</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container" id="login-container">
+            <h1 class="title">Scholieren chat</h1>
+            <h3 class="subtitle">Log in of registreer om te chatten</h3>
+            <form id="login-form">
+                <input type="text" id="username" class="input-box" placeholder="Gebruikersnaam" required>
+                <input type="password" id="password" class="input-box" placeholder="Wachtwoord" required>
+                <button type="submit" class="send-button">Inloggen</button>
+            </form>
+            <div class="register-link">Nog geen account? <a href="#" id="show-register">Registreer hier</a></div>
+            <form id="register-form">
+                <input type="text" id="reg-username" class="input-box" placeholder="Gebruikersnaam" required>
+                <input type="password" id="reg-password" class="input-box" placeholder="Wachtwoord" required>
+                <input type="password" id="reg-password2" class="input-box" placeholder="Herhaal wachtwoord" required>
+                <button type="submit" class="send-button">Registreren</button>
+            </form>
+            <div id="login-error">Onjuiste gegevens</div>
+            <div id="register-error"></div>
+        </div>
+        <div class="container" id="chat-container">
+            <h1 class="title">Scholieren chat</h1>
+            <h3 class="subtitle">Chat met Scholieren over heel Nederland</h3>
+            <div class="chat-box">
+                <div id="user-list"></div>
+                <div class="message-box" id="public-message-box"></div>
+                <div class="input-row">
+                    <input type="text" placeholder="Typ hier je bericht... (publiek)" class="input-box" id="public-chat-input">
+                    <button class="send-button" id="public-send-button">Verstuur publiek</button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    </body>
+</html>
